@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2019
+﻿namespace AdventOfCode2019.Models
 {
     public class Module
     {

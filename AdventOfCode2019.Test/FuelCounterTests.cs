@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using AdventOfCode2019.Models;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;

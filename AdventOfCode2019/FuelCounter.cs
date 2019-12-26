@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventOfCode2019.Models;
+using System;
 using System.Collections.Generic;
 
 namespace AdventOfCode2019

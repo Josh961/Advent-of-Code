@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AdventOfCode2019.IO;
+using AdventOfCode2019.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -6,11 +8,13 @@ namespace AdventOfCode2019
 {
     public class FuelCounterUpper
     {
-        private FuelCounter fuelCounter;
+        private readonly FuelCounter fuelCounter;
+        private readonly IOutputWriter outputWriter;
 
-        public FuelCounterUpper()
+        public FuelCounterUpper(IOutputWriter outputWriter)
         {
             fuelCounter = new FuelCounter();
+            this.outputWriter = outputWriter;
         }
 
         public void Initialize()
@@ -18,10 +22,9 @@ namespace AdventOfCode2019
             IEnumerable<Module> modules = InitializeModulesWithFuelRequirements();
 
             double totalFuelRequired = fuelCounter.CalculateTotalFuelRequirement(modules);
-            Console.WriteLine(totalFuelRequired);
-
             double totalFuelForFuelRequired = fuelCounter.CalculateTotalFuelForFuelRequirement(modules);
-            Console.WriteLine(totalFuelForFuelRequired);
+
+            WriteFuelRequirements(totalFuelRequired, totalFuelForFuelRequired);
         }
 
         private List<Module> InitializeModulesWithFuelRequirements()
@@ -44,6 +47,12 @@ namespace AdventOfCode2019
             }
 
             return modules;
+        }
+
+        private void WriteFuelRequirements(double totalFuelRequired, double totalFuelForFuelRequired)
+        {
+            outputWriter.WriteLine(string.Format("Total fuel requirement: {0:n0}", totalFuelRequired));
+            outputWriter.WriteLine(string.Format("Total fuel for fuel requirement: {0:n0}", totalFuelForFuelRequired));
         }
     }
 }
