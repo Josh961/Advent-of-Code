@@ -15,6 +15,7 @@ namespace AdventOfCode2019
             this.writer = writer;
             days[0] = "The Tyranny of the Rocket Equation";
             days[1] = "1202 Program Alarm";
+            days[2] = "Crossed Wires";
         }
 
         public void Title()

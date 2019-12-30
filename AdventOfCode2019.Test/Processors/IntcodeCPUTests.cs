@@ -1,7 +1,8 @@
-﻿using NUnit.Framework;
+﻿using AdventOfCode2019.Processors;
+using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace AdventOfCode2019.Test
+namespace AdventOfCode2019.Test.Processors
 {
     [TestFixture]
     public class IntcodeCPUTests

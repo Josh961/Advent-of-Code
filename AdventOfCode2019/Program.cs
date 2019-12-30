@@ -1,4 +1,5 @@
 ﻿using AdventOfCode2019.IO;
+using AdventOfCode2019.Systems;
 
 namespace AdventOfCode2019
 {
@@ -29,6 +30,10 @@ namespace AdventOfCode2019
                     case 2:
                         IntcodeComputer intcodeComputer = new IntcodeComputer(outputWriter);
                         intcodeComputer.Initialize();
+                        break;
+                    case 3:
+                        FuelManager fuelManager = new FuelManager(outputWriter);
+                        fuelManager.Initialize();
                         break;
                 }
 

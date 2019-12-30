@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using AdventOfCode2019.Utilities;
+using System.Collections.Generic;
 
-namespace AdventOfCode2019
+namespace AdventOfCode2019.Processors
 {
     public class IntcodeCPU
     {
         public IList<int> ApplyOperations(IList<int> initialMemory)
         {
-            IList<int> memory = ListExtensionMethods.DeepCopy(initialMemory);
+            IList<int> memory = ListUtil.DeepCopy(initialMemory);
 
             int instructionPointer = 0;
             for (int i = 0; memory[i] != 99; i += instructionPointer)

@@ -2,7 +2,7 @@
 using Moq;
 using NUnit.Framework;
 
-namespace AdventOfCode2019.Test
+namespace AdventOfCode2019.Test.IO
 {
     [TestFixture]
     public class UserInputReaderTests

@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace AdventOfCode2019
+namespace AdventOfCode2019.Processors
 {
     public class FuelCounter
     {

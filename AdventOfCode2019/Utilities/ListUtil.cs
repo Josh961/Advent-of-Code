@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace AdventOfCode2019
+namespace AdventOfCode2019.Utilities
 {
-    public static class ListExtensionMethods
+    public static class ListUtil
     {
         public static IList<T> DeepCopy<T>(IList<T> arr)
         {

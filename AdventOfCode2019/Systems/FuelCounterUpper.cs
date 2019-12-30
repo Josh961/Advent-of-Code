@@ -1,10 +1,11 @@
 ﻿using AdventOfCode2019.IO;
 using AdventOfCode2019.Models;
+using AdventOfCode2019.Processors;
+using AdventOfCode2019.Utilities;
 using System;
 using System.Collections.Generic;
-using System.IO;
 
-namespace AdventOfCode2019
+namespace AdventOfCode2019.Systems
 {
     public class FuelCounterUpper
     {
@@ -31,11 +32,7 @@ namespace AdventOfCode2019
         {
             List<Module> modules = new List<Module>();
 
-            string currentDirectory = Directory
-                .GetParent(Environment.CurrentDirectory).Parent.FullName
-                .ToString().Replace("\\bin", "");
-
-            IEnumerable<string> masses = File.ReadLines($"{currentDirectory}/FlatFiles/module_masses.txt");
+            IEnumerable<string> masses = FileUtil.ReadLines("day_1_module_masses.txt");
             foreach (string m in masses)
             {
                 double mass = Convert.ToDouble(m);

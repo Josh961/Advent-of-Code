@@ -1,10 +1,11 @@
 ﻿using AdventOfCode2019.Models;
+using AdventOfCode2019.Processors;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace AdventOfCode2019.Test
+namespace AdventOfCode2019.Test.Processors
 {
     [TestFixture]
     public class FuelCounterTests
@@ -87,7 +88,7 @@ namespace AdventOfCode2019.Test
                 .GetParent(Environment.CurrentDirectory).Parent.FullName
                 .ToString().Replace(".Test\\bin", "");
 
-            IEnumerable<string> masses = File.ReadLines($"{currentDirectory}/FlatFiles/module_masses.txt");
+            IEnumerable<string> masses = File.ReadLines($"{currentDirectory}/FlatFiles/day_1_module_masses.txt");
             foreach (string mass in masses)
             {
                 modules.Add(new Module
@@ -110,7 +111,7 @@ namespace AdventOfCode2019.Test
                 .GetParent(Environment.CurrentDirectory).Parent.FullName
                 .ToString().Replace(".Test\\bin", "");
 
-            IEnumerable<string> masses = File.ReadLines($"{currentDirectory}/FlatFiles/module_masses.txt");
+            IEnumerable<string> masses = File.ReadLines($"{currentDirectory}/FlatFiles/day_1_module_masses.txt");
             foreach (string mass in masses)
             {
                 modules.Add(new Module

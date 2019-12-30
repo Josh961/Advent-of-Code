@@ -1,9 +1,9 @@
 ﻿using AdventOfCode2019.IO;
-using System;
+using AdventOfCode2019.Processors;
+using AdventOfCode2019.Utilities;
 using System.Collections.Generic;
-using System.IO;
 
-namespace AdventOfCode2019
+namespace AdventOfCode2019.Systems
 {
     public class IntcodeComputer
     {
@@ -30,11 +30,7 @@ namespace AdventOfCode2019
         {
             IList<int> memory = new List<int>();
 
-            string currentDirectory = Directory
-                .GetParent(Environment.CurrentDirectory).Parent.FullName
-                .ToString().Replace("\\bin", "");
-
-            IEnumerable<string> linesOfIntegers = File.ReadLines($"{currentDirectory}/FlatFiles/day_2_intcode_inputs.txt");
+            IEnumerable<string> linesOfIntegers = FileUtil.ReadLines("day_2_intcode_inputs.txt");
             foreach(string line in linesOfIntegers)
             {
                 string[] commaDelimitedLine = line.Split(",");
@@ -49,7 +45,7 @@ namespace AdventOfCode2019
 
         private int RestoreGravityAssist(IList<int> initialMemory)
         {
-            IList<int> memory = ListExtensionMethods.DeepCopy(initialMemory);
+            IList<int> memory = ListUtil.DeepCopy(initialMemory);
             int noun = 12;
             int verb = 2;
             memory[1] = noun;
@@ -61,7 +57,7 @@ namespace AdventOfCode2019
 
         private int FindNounAndVerb(IList<int> initialMemory)
         {
-            IList<int> memory = ListExtensionMethods.DeepCopy(initialMemory);
+            IList<int> memory = ListUtil.DeepCopy(initialMemory);
             int noun = 0;
             int verb = 0;
 
