@@ -8,7 +8,6 @@ namespace AdventOfCode2019.Systems
 {
     public class FuelManager
     {
-
         private readonly WireManager wireManager;
         private readonly IOutputWriter outputWriter;
 

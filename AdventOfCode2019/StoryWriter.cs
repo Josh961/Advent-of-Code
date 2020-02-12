@@ -16,6 +16,7 @@ namespace AdventOfCode2019
             days[0] = "The Tyranny of the Rocket Equation";
             days[1] = "1202 Program Alarm";
             days[2] = "Crossed Wires";
+            days[3] = "Secure Container";
         }
 
         public void Title()

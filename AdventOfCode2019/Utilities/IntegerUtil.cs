@@ -2,7 +2,7 @@
 
 namespace AdventOfCode2019.Utilities
 {
-    public static class StringUtil
+    public static class IntegerUtil
     {
         public static IList<int> ParseInts(string line)
         {

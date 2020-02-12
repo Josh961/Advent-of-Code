@@ -35,6 +35,10 @@ namespace AdventOfCode2019
                         FuelManager fuelManager = new FuelManager(outputWriter);
                         fuelManager.Initialize();
                         break;
+                    case 4:
+                        VenusFuelDepot fuelDepot = new VenusFuelDepot(outputWriter);
+                        fuelDepot.Initialize();
+                        break;
                 }
 
                 inputReader.ReadLine();
